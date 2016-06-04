@@ -27,7 +27,8 @@
   var OPS_TO_PREFIXED_TYPES = {
     "$": "text",
     "&": "simple_and",
-    "!": "simple_not"
+    "!": "simple_not",
+    "^": "result_expr"
   };
 
   var OPS_TO_SUFFIXED_TYPES = {
@@ -172,6 +173,7 @@ PrefixedOperator
   = "$"
   / "&"
   / "!"
+  / "^"
 
 SuffixedExpression
   = expression:PrimaryExpression __ operator:SuffixedOperator {

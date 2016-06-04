@@ -424,6 +424,17 @@ can be accessed by action's JavaScript code.
 
 Match a sequence of expressions and return their match results in an array.
 
+#### ^ *expression*
+
+Match the expression. If the match is successful, the expressions's
+return value becomes the value for the match result of the rule the
+expression is a part of, otherwise consider the match failed.
+
+This mechanism replaces the use of the *{ action }* mechanism
+described below for simple cases where there is more than one
+expression in a rule but the value of only a single expression is
+needed.
+
 #### *expression* { *action* }
 
 Match the expression. If the match is successful, run the action, otherwise
